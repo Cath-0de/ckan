@@ -246,7 +246,7 @@ def is_authorized(action: str, context: Context,
 
 # these are the permissions that roles have
 ROLE_PERMISSIONS: dict[str, list[str]] = OrderedDict([
-    ('admin', ['admin', 'membership', 'update']),   #added update to admin permissions to allow them to update datasets and groups they are admins of, as well as their own user details. This is needed for the new collaborators feature but also makes sense in general. See
+    ('admin', ['admin', 'membership']),
     ('editor', ['read', 'delete_dataset', 'create_dataset',
                 'update_dataset', 'manage_group']),
     ('member', ['read', 'manage_group']),
